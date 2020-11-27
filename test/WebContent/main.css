@@ -1,0 +1,46 @@
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+#slide {
+	height: 300px;
+}
+#slide > ul > li > a > img{
+  object-fit: fill;
+}
+#slide > ul > li {
+	position: absolute;
+	font-size: 0;
+}
+
+.btn {
+	margin-bottom: 5px;
+}
+
+.a {
+	padding: 5px;
+	border: 1px solid #3196ff;
+	border-radius: 20px;
+}
+tbody .a:hover  {
+    background-color:#3196ff;
+    color: white;
+}
+.b {
+	border-radius: 15px;
+	text-align: left;
+	border: 1px dashed;
+	padding: 10px;
+}
+
+table {
+	margin-left: auto;
+	border-spacing: 10px;
+	border-collapse: separate;
+	margin-right: auto;
+	width: 100%;
+	text-align: center;
+	align-content: center;
+}
