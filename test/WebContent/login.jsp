@@ -14,7 +14,9 @@
 	href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css"
 	rel="stylesheet" />
 <link rel="stylesheet" href="./style.css">
+
 <script type="text/javascript">
+
 	function checkLogin() {
 		var form = document.loginForm;
 		if (form.name.value == "") {
@@ -30,8 +32,8 @@
 			form.passwd.focus();
 			return false;
 		}
-		
 		form.submit();
+		
 	}
 </script>
 <style type="text/css">
@@ -78,7 +80,7 @@ height: 25px;
 			<section class="col-xs-12 col-sm-12">
 				<div style="margin-bottom: 10px;">
 					<img width="100%" style="float: right; margin-bottom: 20px" src="./img/bg.png"> <br>
-					<form name="loginForm" method="post" action="cho.jsp">
+					<form name="loginForm" method="post" action="mid.jsp">
 						<table class="logtable">
 									<tr>
 								<td><img class="img2" alt="이름" src="./img/name.png">&nbsp;이름</td>
@@ -100,10 +102,10 @@ height: 25px;
 						
 					
 							<tr><td style="text-align: right;" colspan="2">
-							<input type="checkbox" name="reid"> 아이디 기억하기 &nbsp; <input
+							<input type="checkbox" name="reid" id="idSaveCheck"> 아이디 기억하기 &nbsp; <input
 									type="checkbox" name="repw"> 비밀번호 기억하기</td></tr>
 						</table>
-						<div  style="width: 100%; margin: 2.2%">
+						<div  style="width: 100%;">
 							<button type="button" style="width: 100%; border-radius: 20px;"
 								class="btn btn-primary btn-lg" onclick="checkLogin()"><font style="font-weight:bolder;">로그인하기</font> </button>
 							<br>
@@ -136,5 +138,7 @@ height: 25px;
 	<script src="./js/jquery-1.11.2.min.js"></script>
 	<script src="./js/bootstrap.min.js"></script>
 	<script src="./js/style.js"></script>
+	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
 </body>
 </html>

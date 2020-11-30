@@ -13,16 +13,14 @@
 <link rel="stylesheet" href="./main.css">
 <script type="text/javascript"
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script type="text/javascript">
-	$('#slide>ul>li').hide();
-	$('#slide>ul>li:first-child').show();
 
-	setInterval(function() {
-		$('#slide>ul>li:first-child').fadeOut().next().fadeIn().end(1000)
-				.appendTo('#slide>ul');
-	}, 3000);
-	
-</script>
+<style type="text/css">
+.abc{
+width: 100%;
+height: auto;
+}
+
+</style>
 </head>
 <body>
 	<header class="navbar navbar-fixed-top navbar-inverse"
@@ -53,14 +51,15 @@
 		<div class="row row-offcanvas row-offcanvas-right">
 			<section class="col-xs-12 col-sm-12" style="align-content: center;">
 				<div class="main2">
-					<div id="slide">
+				<img class="abc" src="./img/main1.png">
+				<!-- 	<div id="slide">
 						<ul>
 							<li><a href="#"> <img src="./img/main1.png"></a></li>
 							<li><a href="#"><img src="./img/main2.png"></a></li>
 							<li><a href="#"><img src="./img/main3.png"></a></li>
 						
 						</ul>
-					</div>
+					</div> -->
 					<br>
 					<table
 						style="margin-left: auto; border-spacing: 10px; border-collapse: separate; margin-right: auto; width: 100%; text-align: center; align-content: center;">

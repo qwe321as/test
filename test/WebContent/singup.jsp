@@ -69,6 +69,17 @@ function passwd_keyup() {
 		pwsame = "비번일치";
 	}
 }
+
+function phonecheck() {
+	var phone = $("#phone").val();
+	if(phone.search(/[0-9]/g)){
+		alert("핸드폰 번호는 숫자만 입력가능합니다.");
+	resultph = "impossible";
+	}else {
+		resultph= "possible";
+	}
+
+}
 function pwcheck() {
 	var pw = $("#password").val();
 	var num = pw.search(/[0-9]/g);
@@ -92,16 +103,6 @@ function pwcheck() {
 
 }
 
-function phonecheck() {
-	var phone = $("#phone").val();
-	if(phone.search(/[0-9]/g)){
-		alert("핸드폰 번호는 숫자만 입력가능합니다.");
-	resultph = "impossible";
-	}else {
-		resultph= "possible";
-	}
-
-}
 
 </script>
 <style type="text/css">
@@ -156,7 +157,7 @@ height: 25px;
 							</tr>
 							<tr>
 								<td ><img class="img1" alt="아이디" src="./img/id.png">&nbsp;아이디 
-							<a href="#" onclick="alert('준비중입니다.')">	<font style="float: right; font-size: 5px; color: gray;">중복체크&nbsp;</font> 
+							<a href="#" onclick="alert('준비중입니다.')">	<font style="float: right; font-size: 5px;  color: gray;">중복체크&nbsp;</font> 
 								</a></td>
 							</tr><tr>	<td class="ma"><input class="box" placeholder="아이디를 입력하세요" type="text" name="id"></td>
 							</tr>
@@ -183,12 +184,14 @@ height: 25px;
 								
 							</tr>
 							<tr>
-								<td><img class="img1" alt="핸드폰번호" src="./img/핸드폰.png">핸드폰</td>
-							</tr><tr>		<td class="ma"><input class="box" type="text" onBlur="phonecheck()"  onkeyup="phone_keyup()" placeholder="핸드폰 번호를를 입력하세요" id="phone" name="phone"></td>
+								<td><img class="img1" alt="핸드폰번호" src="./img/핸드폰.png">핸드폰
+								<span id="phone_num"
+						style="display: none; position: relative; float: right;" ></span></td>
+							</tr><tr>		<td class="ma"><input class="box" type="text" onBlur="phonecheck()" placeholder="핸드폰 번호를를 입력하세요" id="phone" name="phone"></td>
 								
 							</tr>
 						</table>
-						<div  style="width: 100%; margin: 2.2%">
+						<div  style="width: 100%; ">
 							<button type="submit" style="width: 100%; border-radius: 20px;"
 								class="btn btn-primary btn-lg" ><font style="font-weight:bolder;">회원가입하기</font> </button>
 							<br>

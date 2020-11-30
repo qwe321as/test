@@ -2,7 +2,12 @@
 	pageEncoding="UTF-8"%>
 <%
 	request.setCharacterEncoding("UTF-8");
-	String name = request.getParameter("name");
+String name="";
+name = (String)session.getAttribute("name"); 
+ if(name==null){
+	response.sendRedirect("login.jsp");
+}
+		/* String name = request.getParameter("name"); */
 %>
 <!DOCTYPE html>
 <html lang="utf-8">
@@ -12,8 +17,8 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <title>main</title>
-<link rel="shortcut icon" href="../../assets/ico/favicon.png">
-<link rel="stylesheet" href="./css/bootstrap.min.css">
+<!-- <link rel="shortcut icon" href="../../assets/ico/favicon.png">
+ --><link rel="stylesheet" href="./css/bootstrap.min.css">
 <link
 	href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css"
 	rel="stylesheet" />

@@ -4,21 +4,9 @@
 	padding: 0;
 }
 
-#slide {
-	height: 300px;
-}
-#slide > ul > li > a > img{
-  object-fit: fill;
-}
-#slide > ul > li {
-	position: absolute;
-	font-size: 0;
-}
-
 .btn {
 	margin-bottom: 5px;
 }
-
 .a {
 	padding: 5px;
 	border: 1px solid #3196ff;

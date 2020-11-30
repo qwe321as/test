@@ -8,6 +8,7 @@
 	String category = request.getParameter("category");
 	contentdao dao = new contentdao();
 	ArrayList<content> list = dao.contents();
+	boolean islike = false;
 %>
 <%@include file="listTop.jsp"%>
 <style type="text/css">
@@ -55,7 +56,17 @@ table {
 		}
 		document.searchForm.submit();
 	}
- 	function star(num) {
+	$('#like').on('click',function(){
+		if (islike) {
+			$('#like').html("<img role='button' src='./img/빈별.png' width='40px' height='40px'>");
+			islike = false;
+		}else if (!islike) {
+			$('#like').html("<img role='button' src='./img/체워진별.png' width='40px' height='40px'>");
+			islike = true;
+			
+		}
+	});
+/*  	function star(num) {
 		alert(num);
 		if (num==0) {
 			num=1;
@@ -64,7 +75,7 @@ table {
 		} else {
 			alert('별두번클릭');
 		}
-	} 
+	} */ 
 </script>
 <div class="container">
 	<div class="row row-offcanvas row-offcanvas-right">
@@ -83,7 +94,7 @@ table {
 				<form method="post" name="searchForm" action="#">
 					<input type="text" style="width: 85%; border-radius: 15px;"
 						name="search" placeholder="검색할 내용을 입력하세요."> <img
-						style="width: 35px;" alt="검색" src="./img/돋보기2.png"
+						style="width: 35px; " alt="검색" src="./img/돋보기2.png"
 						onclick="hehe()">
 				</form>
 			</div>
@@ -93,27 +104,12 @@ table {
 					for (int i = 0; i < list.size(); i++) {
 				%>
 				<tr>
-					<td rowspan="3">
-						<%
-							if (list.get(i).getStar() == 0) {
-						%> <img id="Context" style="width: 35px;" onclick="star(<%=list.get(i).getStar()%>)" alt="별"
-						src="./img/빈별.png"> </a><%
- 	} else {
- %>
- <img id="Context"  style="width: 35px;" onclick="star(<%=list.get(i).getStar()%>)" alt="별" 
-						src="./img/체워진별.png"> <%
- 	}
- %>
-
+					<td rowspan="3">	
+						<div id="like" style="width: 35px; height : 35px;"><img role='button' src='./img/빈별.png' width='40px' height='40px'></div>
 					</td>
 					<td style="font-weight: bold;">
-					<% if(i%2==0){ %>
-					<a href="listDe.jsp"><%=list.get(i).getTitle()%>
-					</a>
-					<%}else{%>
-					<a href="listDe2.jsp"><%=list.get(i).getTitle()%>
-					</a>
-					<%} %>
+						<% if(i%2==0){ %> <a href="listDe.jsp"><%=list.get(i).getTitle()%>
+					</a> <%}else{%> <a href="listDe2.jsp"><%=list.get(i).getTitle()%> </a> <%} %>
 					</td>
 				</tr>
 				<tr>

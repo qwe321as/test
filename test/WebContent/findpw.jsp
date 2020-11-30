@@ -99,7 +99,7 @@ height: 25px;
 							</tr>
 					
 						</table>
-						<div  style="width: 100%; margin: 2.2%">
+						<div  style="width: 100%; ">
 							<button type="button" style="width: 100%; border-radius: 20px;"
 								class="btn btn-primary btn-lg" onclick="checkLogin()"><font style="font-weight:bolder;">비밀번호 찾기</font> </button>
 							<br>
